@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<mapper namespace="com.yfwl.yfpay.mapper.TestStockMapper">
+	<resultMap  id="BaseResultMap" type="com.yfwl.yfpay.domain.TestStock">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="stockid" property="stockId" jdbcType="INTEGER" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="market" property="market" jdbcType="INTEGER" /> 	
+	</resultMap>
+	
+	<select id="getTest" resultMap="BaseResultMap">
+		SELECT * FROM test1 WHERE id = 1;
+	</select>
+
+</mapper>
